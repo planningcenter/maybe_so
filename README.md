@@ -28,7 +28,7 @@ Or install it yourself as:
 
 Let's say you have an ActiveRecord attribute called `hidden` that you want to only be 0 or 1, never nil.
 
-```
+```ruby
 add_column :products, :hidden, :boolean, default: false, null: false
 ```
 
