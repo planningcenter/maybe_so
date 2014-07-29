@@ -3,7 +3,7 @@ require "spec_helper"
 describe MaybeSo::ActiveModel::BooleanAttribute do
   before do
     @klass = Class.new
-    @klass.include ActiveModel::Model
+    @klass.send(:include) ActiveModel::Model
   end
 
   it "has the #boolean_attribute method on the class" do
