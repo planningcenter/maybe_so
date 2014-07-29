@@ -4,7 +4,7 @@ Ever get annoyed that ActiveRecord blows up if you set a boolean column to nil? 
 
 Maybe So handles this for you!
 
-Tested on the following Rubies: MRI 1.9.2, 1.9.3, 2.0.0, 2.1.x, REE, JRuby (1.7.2 and newer).
+Tested on the following Rubies: MRI 1.9.3, 2.0.0, 2.1.x, JRuby (1.7.2 and newer).
 
 [![Build Status](https://secure.travis-ci.org/ministrycentered/maybe_so.svg?branch=master)](http://travis-ci.org/ministrycentered/maybe_so)
 
