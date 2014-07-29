@@ -2,8 +2,12 @@ require "spec_helper"
 
 describe MaybeSo::ActiveModel::BooleanAttribute do
   before do
-    @klass = Class.new
-    @klass.send(:include, ActiveModel::Model)
+    @klass = Class.new do
+      def self.name
+        "Bazinga"
+      end
+      include ActiveModel::Model
+    end
   end
 
   it "has the #boolean_attribute method on the class" do
@@ -56,6 +60,9 @@ describe MaybeSo::ActiveModel::BooleanAttribute do
         expect(@record.hidden).to eq(false)
       end
 
+      it "is a valid record without setting anything" do
+        expect(@record).to be_valid
+      end
     end
   end
 end

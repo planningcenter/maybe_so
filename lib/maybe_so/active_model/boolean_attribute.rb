@@ -31,7 +31,7 @@ module MaybeSo
           # assignment.
           unless skip_validator
             instance_eval do
-              validates_inclusion_of attribute.to_sym, in: [true, false]
+              validates_inclusion_of attribute.to_sym, in: [true, false], allow_blank: true
             end
           end
         end
