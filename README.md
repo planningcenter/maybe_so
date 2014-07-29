@@ -4,6 +4,10 @@ Ever get annoyed that ActiveRecord blows up if you set a boolean column to nil? 
 
 Maybe So handles this for you!
 
+Tested on the following Rubies: MRI 1.9.2, 1.9.3, 2.0.0, 2.1.x, REE, JRuby (1.7.2 and newer).
+
+[![Build Status](https://secure.travis-ci.org/ministrycentered/maybe_so.svg?branch=master)](http://travis-ci.org/ministrycentered/maybe_so)
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -36,7 +40,7 @@ class Product < ActiveRecord::Base
 end
 ```
 
-By default, Maybe So accepts the following case insensitive values as `true`. Everything else is false. You can override these values with the `truthy_values` option (see below).
+By default, Maybe So accepts the following case insensitive values as `true`. Everything else is `false`. You can override these values with the `truthy_values` option (see below).
 
 ```ruby
 true, "true", "Y", "Yes", 1, "1", "T"
