@@ -9,7 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["James Miller", "Tanner Mares"]
   spec.email         = ["bensie@gmail.com", "tannermares@gmail.com"]
   spec.summary       = %q{Ruby boolean type casting}
-  spec.homepage      = ""
+  spec.description   = %q{Ruby boolean type casting}
+  spec.homepage      = "https://github.com/ministrycentered/maybe_so"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -18,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.6"
-  spec.add_development_dependency "rake"
-  spec.add_development_dependency "rspec", "~> 3.0.0"
-  spec.add_development_dependency "activemodel", ">= 3.2.0"
+  spec.add_development_dependency "rake", '~> 0'
+  spec.add_development_dependency "rspec", ">= 3.0.0", "< 4"
+  spec.add_development_dependency "activemodel", ">= 3.2.0", "< 5"
 end
