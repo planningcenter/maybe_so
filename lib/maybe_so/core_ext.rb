@@ -1,0 +1,5 @@
+require "maybe_so/core_ext/string"
+require "maybe_so/core_ext/fixnum"
+require "maybe_so/core_ext/true_class"
+require "maybe_so/core_ext/false_class"
+require "maybe_so/core_ext/nil_class"
