@@ -61,7 +61,7 @@ end
 `boolean_attributes` accepts an options hash for the following:
 
 - `truthy_values`: array of values (will be coerced into strings when checking) to be considered truthy
-- `skip_validator`: this will not add the default `validates_inclusion_of` to ensure records are not valid unless they are set to `true` or `false`
+- `skip_validator`: this will _omit_ adding the `validates_inclusion_of` to ensure records are not valid unless they are set to `true` or `false`. Note it does _not_ validate presence. If you want that, you'll need to add a separate validation.
 
 Example custom configuration:
 
@@ -69,6 +69,36 @@ Example custom configuration:
 class Product < ActiveRecord::Base
   boolean_attribute :hidden, truthy_values: ["Si"], skip_validator: true
 end
+```
+
+### #to_bool
+
+`String`, `Fixnum`, `TrueClass`, `FalseClass`, `NilClass` all have `#to_bool` added.
+
+```ruby
+"Yes".to_bool # Uses the same truthy values as shown above
+# => true
+
+"zing".to_bool
+# => false
+
+"1".to_bool
+# => true
+
+1.to_bool
+# => true
+
+42.to_bool
+# => false
+
+true.to_bool
+# => true
+
+false.to_bool
+# => false
+
+nil.to_bool
+# => false
 ```
 
 ## Copyright
