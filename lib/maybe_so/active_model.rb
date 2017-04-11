@@ -9,7 +9,8 @@ module ActiveModel
           include MaybeSo::ActiveModel::BooleanAttribute
         end
       end
-      alias_method_chain :included, :boolean_attribute
+      alias_method :included_without_boolean_attribute, :included
+      alias_method :included, :included_with_boolean_attribute
     end
   end
 end
