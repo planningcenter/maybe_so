@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe Fixnum do
+describe Integer do
   describe "#to_bool" do
     context "when 1" do
       it "returns true" do
