@@ -1,4 +1,4 @@
-Copyright (c) 2014 James Miller & Tanner Mares
+Copyright (c) 2017 James Miller & Tanner Mares
 
 MIT License
 

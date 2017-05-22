@@ -1,7 +1,6 @@
 module MaybeSo
   module ActiveModel
     module BooleanAttribute
-
       def self.included(base)
         base.extend(ClassMethods)
       end

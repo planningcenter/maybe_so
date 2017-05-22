@@ -4,7 +4,7 @@ Ever get annoyed that ActiveRecord blows up if you set a boolean column to nil? 
 
 Maybe So handles this for you!
 
-Tested on the following Rubies: MRI 1.9.3, 2.0.0, 2.1.x, JRuby (1.7.2 and newer).
+Tested on Ruby 2.x (MRI)
 
 [![Build Status](https://secure.travis-ci.org/ministrycentered/maybe_so.svg?branch=master)](http://travis-ci.org/ministrycentered/maybe_so)
 
@@ -73,7 +73,7 @@ end
 
 ### #to_bool
 
-`String`, `Fixnum`, `TrueClass`, `FalseClass`, `NilClass` all have `#to_bool` added.
+`String`, `Integer`, `TrueClass`, `FalseClass`, `NilClass` all have `#to_bool` added.
 
 ```ruby
 "Yes".to_bool # Uses the same truthy values as shown above
@@ -103,4 +103,4 @@ nil.to_bool
 
 ## Copyright
 
-Copyright (c) 2014 James Miller and Tanner Mares
+Copyright (c) 2017 James Miller and Tanner Mares
